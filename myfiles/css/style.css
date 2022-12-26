@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root {
+    /* --color-body: #b6cbce;
+    --color-heading: #eef3db; */
+        --color-body: #5007f8;
+    --color-heading: #f20d3a;
+    --color-base: #06cfea;
+    /* --color-base2: #022a30; */
+     --color-base2: rgba(126, 235, 2, 0.156);
+    --color-brand: #f16d08;
+    --color-brand2: #050601;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+/* 
+h1,h2,h3,,h4,h5,h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+} */
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img {
+    width: 100%;
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.bg-base {
+      background-color: rgb(145, 222, 226); 
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(6, 0, 0, 0.76);
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--color-base);
+}
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(248, 250, 251);
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-brand);
+}
+
+.navbar .nav-link.active {
+    color: var(--color-brand);
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: linear-gradient(rgba(3, 63, 71, 0.8), rgba(3, 63, 71, 0.8)), url(../images/sidebar-img.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .navbar-brand img {
+        border: 8px solid var(--color-brand);
+    }
+
+    /* CONTENT WRAPPER */
+    #content-wrapper {
+        padding-left: var(--sidbar-width);
+    }
+}
+
+/* BTN */
+.btn {
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+}
+
+/* CARD */
+.card-custom .card-custom-image {
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+
+/* CONTACT */
+#contact .form-control {
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: var(--color-body);
+}
+
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+    color: var(--color-body);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+/* SOCIAL ICONS */
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 100px;
+    font-size: 24px;
+}
+
+.about{
+    min-height: 100%;
+}
+.about .first1 h3{
+    font-size: 2.5rem;
+    color: rgb(14, 2, 2);
+}
+.about .first1 h3 span{
+    color: rgb(9, 1, 1);
+}
+
+.about .first1 p{
+    font-size: 1.5rem;
+    color: rgb(13, 10, 10);
+    padding: .5rem 0;
+}
+
+.skill{
+    min-height: 100vh;
+    border-bottom: 2px solid rgba(8, 1, 1, 0.1);
+}
+.skill .skils
+{
+    padding: 1rem 0;
+   
+}
+
+.skill .skils .progress
+{
+    margin: 1.5rem 0;
+    padding: 1rem;
+    box-shadow: 0 1rem 2rem rgba(0 0 0 .2);
+    background: rgba(255 255 255 .2);
+    border-radius: 1rem;
+}
+.skill .skils .progress h3{
+    display: flex;
+    font-size: 1rem;
+    font-weight: 3800;
+    font-style: var(--color-base2);
+    color: rgb(7, 0, 0);
+    align-content: space-betweenq;
+}
+.skill .skils .progress .bars{
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    margin: 1rem 0;
+    background: rgb(49, 1, 1);
+}
+
+.skill .skils .progress .bars span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 237, 99);
+
+}
+
+.skill .skils .progress:nth-child(1) .bars span{
+    width: 95;
+}
+.skill .skils .progress:nth-child(2) .bars span{
+    width: 85;
+}
+.skill .skils .progress:nth-child(3) .bars span{
+    width: 91;
+}
+.skill .skils.progress:nth-child(4) .bars span{
+    width: 80;
+}
+.skill .skils .progress:nth-child(5) .bars span{
+    width: 65;
+}
+.skill .skils .progress:nth-child(6) .bars span{
+    width: 75;
+}
+.skill .skils .progress:nth-child(7) .bars span{
+    width: 71;
+}
+.skill .skils.progress:nth-child(8) .bars span{
+    width: 50;
+}
+
+.education{
+    border-bottom: 2px solid rgba(6, 0, 0, 0.76);
+}
+.education .box-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.education .box-container .box{
+    width: 35rem;
+    padding: 0 2rem;
+    padding-bottom: 3rem;
+    border-left: .2rem solid rgb(6, 1, 1);
+}
+
+.education .box-container .box .year{
+    font-size: 2rem;
+    color: rgb(17, 64, 254);
+    position:relative;
+}
+
+.education .box-container .box .year::before{
+    content: '';
+    position:absolute;
+    top: .3rem; left: -3.1rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: rgb(3, 40, 248);
+}
+.education .box-container .box h3{
+    font-size: 2rem;
+    color:rgb(7, 0, 206);
+    padding-top: 1rem;
+}
+.education .box-container .box p{
+    font-size: 1.2rem;
+    color:rgb(3, 9, 90);
+    padding: 1rem 2;
+}
+.education{
+    border-bottom: 2px solid rgba(6, 0, 0, 0.76);
+}
+ 
+.skill{
+    border-bottom: 2px solid rgba(6, 0, 0, 0.76);
+}
+.snapshot,.contact,.education{
+        min-height: 100vh;
+        border-bottom: 2px solid rgba(2, 4, 12, 0.1);
+}
+.snapshot{
+    border-bottom: 2px solid rgba(6, 0, 0, 0.76);
+}
+.contact{
+    border-bottom: 2px solid rgba(6, 0, 0, 0.76);
+}
+.contact .row{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 7rem;
+    align-items: center;
+}
+.contact .row form{
+    background: rgba(255 255 255 .1);
+    box-shadow: 0 1rem 2rem rgba(0 0 0 .2);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.contact .row form .box{
+    background: rgba(255 255 255 .1);
+    box-shadow: 0 1rem 2rem rgba(0 0 0 .2);
+    border-radius: 1rem;
+    padding: 0 1rem;
+    display: flex;
+    margin: 1rem 0;
+    height: 4rem;
+    width: 49%;
+   font-size: 1.7rem;
+   color: rgb(7, 1, 1);
+   text-transform: none;
+}
+
+.contact .row form .box::placeholder{
+text-transform: capitalize;
+color: rgb(15, 4, 4);
+}
+.contact .row form .message{
+    padding: 1rem;
+    height: 15rem;
+    resize: none;
+    width: 100%;
+}
+.btn{
+    justify-content: center;
+}
+.contact .row form .btns{
+
+    padding:.3rem;
+    font-size: 2.5rem;
+    color: rgb(1, 1, 10);
+    /* border-radius: 5px; */
+    outline-style: groove;
+    justify-content: center;
+    align-self: center;
+  
+}
+.contact .row .content
+{
+    padding: 5rem ;
+}
+.contact .row .content .icons{
+    padding:1rem;
+   
+}
+.contact .row .content .icons h3{
+    padding:1rem;
+    font-size: 2rem;
+    color: rgb(15, 3, 3);
+    display: flex;
+}
+.contact .row .content .icons h3 i{
+    padding-right: .10rem 0;
+}
+.contact .row .content .icons p{
+    font-size: 1.5rem;
+    color: rgb(12, 2, 2);
+}
+/* .theme-toggler{
+    background: rgba(255 255 255 .2);
+    box-shadow: 0 1rem 2rem rgba(0 0 0 .2);
+    border-radius: 1rem;
+    backdrop-filter: blur(.4rem);
+
+}
+.theme-toggler span{
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    cursor:pointer;
+    margin: 2rem 2.5rem;
+    box-shadow: 0 0 0 .5rem rgba(255 255 255 .2),
+                0 1rem 2rem rgba(0 0 0 .2);
+            } */
